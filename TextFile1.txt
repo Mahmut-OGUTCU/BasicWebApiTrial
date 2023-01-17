@@ -1,0 +1,2 @@
+password iþlemleri
+authorize iþlemleri
