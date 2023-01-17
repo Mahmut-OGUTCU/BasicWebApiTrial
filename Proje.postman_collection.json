@@ -1,0 +1,336 @@
+{
+	"info": {
+		"_postman_id": "dd23097b-e103-4285-b9f6-98e5862d7625",
+		"name": "Proje",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17771259"
+	},
+	"item": [
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "get-all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZEBnbWFpbC5jb20iLCJuYmYiOjE2NzM5NDcxODEsImV4cCI6MTY3Mzk5MDM4MSwiaWF0IjoxNjczOTQ3MTgxfQ.HMJ-vFQW5UdOV2kYSNEXfrBhFTulOi0xrluJ_pZve2s"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZEBnbWFpbC5jb20iLCJuYmYiOjE2NzM5NDcxODEsImV4cCI6MTY3Mzk5MDM4MSwiaWF0IjoxNjczOTQ3MTgxfQ.HMJ-vFQW5UdOV2kYSNEXfrBhFTulOi0xrluJ_pZve2s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"PersonID\" : 0\r\n}"
+						},
+						"url": "https://localhost:44309/api/person/get-all"
+					},
+					"response": []
+				},
+				{
+					"name": "person-add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZEBnbWFpbC5jb20iLCJuYmYiOjE2NzM4NjUyODksImV4cCI6MTY3Mzg2NTMxOSwiaWF0IjoxNjczODY1Mjg5fQ.68mIBr4kZeIK6iyCOaBTSFmfv9jOdMr5PIkeGyYP-I4"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZEBnbWFpbC5jb20iLCJuYmYiOjE2NzM4NjUyODksImV4cCI6MTY3Mzg2NTMxOSwiaWF0IjoxNjczODY1Mjg5fQ.68mIBr4kZeIK6iyCOaBTSFmfv9jOdMr5PIkeGyYP-I4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"PersonFirstName\" : \"Test Adı\",\r\n    \"PersonLastName\" : \"Test Soyadı\",\r\n    \"PersonEmail\":\"maogutcu9@gmail.com\",\r\n    \"PersonPhone\":\"05348933513\",\r\n    \"PersonPassword\": \"Test Şifre1.\"\r\n}"
+						},
+						"url": "https://localhost:44309/api/person/person-add"
+					},
+					"response": []
+				},
+				{
+					"name": "person-update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZDZAZ21haWwuY29tIiwibmJmIjoxNjczNjEwMzMxLCJleHAiOjE2NzM2NTM1MzEsImlhdCI6MTY3MzYxMDMzMX0.FdtmG6ghTsWYllwo2_v2V-_MtpdbitM-EjJjp_41uQ4"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZDZAZ21haWwuY29tIiwibmJmIjoxNjczNjEwMzMxLCJleHAiOjE2NzM2NTM1MzEsImlhdCI6MTY3MzYxMDMzMX0.FdtmG6ghTsWYllwo2_v2V-_MtpdbitM-EjJjp_41uQ4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"PersonID\":1004,\r\n    \"PersonFirstName\" : \"Test Adı\",\r\n    \"PersonLastName\" : \"Test Soyadı\",\r\n    \"PersonPassword\": \"Test Şifre\",\r\n    \"PersonEmail\":\"asd6@gmail.com\",\r\n    \"PersonPhone\":\"05348933518\"\r\n}"
+						},
+						"url": "https://localhost:44309/api/person/person-update"
+					},
+					"response": []
+				},
+				{
+					"name": "person-delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZDRAZ21haWwuY29tIiwibmJmIjoxNjczNjExMTkyLCJleHAiOjE2NzM2NTQzOTIsImlhdCI6MTY3MzYxMTE5Mn0.udSGRuOJ0fgLTzmyWGDAqpYu5O3dyOfloAD2uUhR6Rg"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZDRAZ21haWwuY29tIiwibmJmIjoxNjczNjExMTkyLCJleHAiOjE2NzM2NTQzOTIsImlhdCI6MTY3MzYxMTE5Mn0.udSGRuOJ0fgLTzmyWGDAqpYu5O3dyOfloAD2uUhR6Rg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"PersonID\":1004\r\n}"
+						},
+						"url": "https://localhost:44309/api/person/person-delete"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PersonLogin",
+			"item": [
+				{
+					"name": "person-login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"PersonEmail\":\"asd@gmail.com\",\r\n    \"PersonPassword\":\"Şifre\"\r\n}"
+						},
+						"url": "https://localhost:44309/api/personlogin/person-login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mail",
+			"item": [
+				{
+					"name": "send-mail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZEBnbWFpbC5jb20iLCJuYmYiOjE2NzM4NjIxNzUsImV4cCI6MTY3MzkwNTM3NCwiaWF0IjoxNjczODYyMTc1fQ.HXlQ9t7LY3AXNY7XM9mIEfyZIQ6D7u8YI14GP3u0lao"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZEBnbWFpbC5jb20iLCJuYmYiOjE2NzM4NjIxNzUsImV4cCI6MTY3MzkwNTM3NCwiaWF0IjoxNjczODYyMTc1fQ.HXlQ9t7LY3AXNY7XM9mIEfyZIQ6D7u8YI14GP3u0lao",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ToEmail",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Attachments",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "Subject",
+									"value": "Test",
+									"type": "text"
+								},
+								{
+									"key": "Body",
+									"value": "Test",
+									"type": "text"
+								}
+							]
+						},
+						"url": "https://localhost:44309/api/mail/send-mail"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "get-all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZEBnbWFpbC5jb20iLCJuYmYiOjE2NzM5NDcxODEsImV4cCI6MTY3Mzk5MDM4MSwiaWF0IjoxNjczOTQ3MTgxfQ.HMJ-vFQW5UdOV2kYSNEXfrBhFTulOi0xrluJ_pZve2s"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZEBnbWFpbC5jb20iLCJuYmYiOjE2NzM5NDcxODEsImV4cCI6MTY3Mzk5MDM4MSwiaWF0IjoxNjczOTQ3MTgxfQ.HMJ-vFQW5UdOV2kYSNEXfrBhFTulOi0xrluJ_pZve2s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DepartmentID\":1\r\n}"
+						},
+						"url": "https://localhost:44309/api/department/get-all"
+					},
+					"response": []
+				},
+				{
+					"name": "department-add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZEBnbWFpbC5jb20iLCJuYmYiOjE2NzM5NDcxODEsImV4cCI6MTY3Mzk5MDM4MSwiaWF0IjoxNjczOTQ3MTgxfQ.HMJ-vFQW5UdOV2kYSNEXfrBhFTulOi0xrluJ_pZve2s"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZEBnbWFpbC5jb20iLCJuYmYiOjE2NzM5NDcxODEsImV4cCI6MTY3Mzk5MDM4MSwiaWF0IjoxNjczOTQ3MTgxfQ.HMJ-vFQW5UdOV2kYSNEXfrBhFTulOi0xrluJ_pZve2s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DepartmentName\":\"Yazılım2\",\r\n    \"DepartmentDescription\":\"Yazılım add\"\r\n}"
+						},
+						"url": "https://localhost:44309/api/department/department-add"
+					},
+					"response": []
+				},
+				{
+					"name": "department-update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZEBnbWFpbC5jb20iLCJuYmYiOjE2NzM5NDcxODEsImV4cCI6MTY3Mzk5MDM4MSwiaWF0IjoxNjczOTQ3MTgxfQ.HMJ-vFQW5UdOV2kYSNEXfrBhFTulOi0xrluJ_pZve2s"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZEBnbWFpbC5jb20iLCJuYmYiOjE2NzM5NDcxODEsImV4cCI6MTY3Mzk5MDM4MSwiaWF0IjoxNjczOTQ3MTgxfQ.HMJ-vFQW5UdOV2kYSNEXfrBhFTulOi0xrluJ_pZve2s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DepartmentID\":1,\r\n    \"DepartmentName\":\"Yazılım2\",\r\n    \"DepartmentDescription\":\"Yazılım update\"\r\n}"
+						},
+						"url": "https://localhost:44309/api/department/department-update"
+					},
+					"response": []
+				},
+				{
+					"name": "department-delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZEBnbWFpbC5jb20iLCJuYmYiOjE2NzM5NDcxODEsImV4cCI6MTY3Mzk5MDM4MSwiaWF0IjoxNjczOTQ3MTgxfQ.HMJ-vFQW5UdOV2kYSNEXfrBhFTulOi0xrluJ_pZve2s"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFzZEBnbWFpbC5jb20iLCJuYmYiOjE2NzM5NDcxODEsImV4cCI6MTY3Mzk5MDM4MSwiaWF0IjoxNjczOTQ3MTgxfQ.HMJ-vFQW5UdOV2kYSNEXfrBhFTulOi0xrluJ_pZve2s",
+								"type": "text"
+							}
+						],
+						"url": "https://localhost:44309/api/department/department-delete"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
